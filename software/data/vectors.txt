@@ -1,0 +1,45 @@
+   #  version  src -> dst  (see packets.hex for the 72-hex-digit vectors)
+   0  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=0 dport=443   ALLOW
+   1  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=0 dport=23    DROP blocked port
+   2  IPv4       192.168.1.100 -> 203.0.113.10       proto=6   syn=0 dport=80    DROP blocked source IP
+   3  IPv4           10.0.0.50 -> 203.0.113.10       proto=6   syn=0 dport=80    DROP blocked source IP
+   4  IPv4            10.0.0.5 -> 192.168.1.200      proto=6   syn=0 dport=80    DROP blocked destination IP
+   5  IPv4            10.0.0.5 -> 8.8.8.8            proto=17  syn=0 dport=53    DROP UDP blocked
+   6  IPv4       192.168.1.100 -> 203.0.113.10       proto=6   syn=0 dport=23    DROP blocked source IP
+   7  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=0 dport=80    ALLOW
+   8  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=1 dport=80    ALLOW
+   9  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=1 dport=80    ALLOW
+  10  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=1 dport=80    ALLOW
+  11  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=1 dport=80    DROP SYN flood
+  12  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=1 dport=80    DROP SYN flood
+  13  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=0 dport=443   ALLOW
+  14  IPv4           10.0.0.50 -> 203.0.113.10       proto=6   syn=1 dport=80    DROP blocked source IP
+  15  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=1 dport=80    DROP SYN flood
+  16  IPv4            10.0.0.5 -> 203.0.113.10       proto=1   syn=0 dport=0     ALLOW
+  17  IPv4            10.0.0.5 -> 203.0.113.10       proto=1   syn=0 dport=0     ALLOW
+  18  IPv4            10.0.0.5 -> 203.0.113.10       proto=1   syn=0 dport=0     ALLOW
+  19  IPv4            10.0.0.5 -> 203.0.113.10       proto=1   syn=0 dport=0     DROP ICMP flood
+  20  IPv4            10.0.0.5 -> 203.0.113.10       proto=1   syn=0 dport=0     DROP ICMP flood
+  21  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=0 dport=443   ALLOW
+  22  IPv4            10.0.0.5 -> 203.0.113.10       proto=1   syn=0 dport=0     DROP ICMP flood
+  23  IPv4            10.0.0.5 -> 203.0.113.10       proto=6   syn=1 dport=80    ALLOW
+  24  IPv4            10.0.0.5 -> 203.0.113.10       proto=1   syn=0 dport=0     ALLOW
+  25  IPv4        203.0.113.10 -> 10.0.0.5           proto=6   syn=0 dport=50000 ALLOW
+  26  IPv6         2001:db8::5 -> 2001:db8::10       proto=6   syn=0 dport=443   ALLOW
+  27  IPv6         2001:db8::5 -> 2001:db8::10       proto=6   syn=0 dport=23    DROP blocked port
+  28  IPv6     2001:db8::bad:1 -> 2001:db8::10       proto=6   syn=0 dport=80    DROP blocked source IP
+  29  IPv6     2001:db8::bad:2 -> 2001:db8::10       proto=6   syn=0 dport=80    DROP blocked source IP
+  30  IPv6         2001:db8::5 -> 2001:db8::200      proto=6   syn=0 dport=80    DROP blocked destination IP
+  31  IPv6         2001:db8::5 -> 2001:db8::53       proto=17  syn=0 dport=53    DROP UDP blocked
+  32  IPv6  2001:db8::c0a8:164 -> 2001:db8::10       proto=6   syn=0 dport=80    ALLOW
+  33  IPv6         2001:db8::5 -> 2001:db8::10       proto=6   syn=1 dport=80    ALLOW
+  34  IPv6         2001:db8::5 -> 2001:db8::10       proto=6   syn=1 dport=80    ALLOW
+  35  IPv6         2001:db8::5 -> 2001:db8::10       proto=6   syn=1 dport=80    ALLOW
+  36  IPv6         2001:db8::5 -> 2001:db8::10       proto=6   syn=1 dport=80    DROP SYN flood
+  37  IPv6         2001:db8::5 -> 2001:db8::10       proto=58  syn=0 dport=0     ALLOW
+  38  IPv6         2001:db8::5 -> 2001:db8::10       proto=58  syn=0 dport=0     ALLOW
+  39  IPv4            10.0.0.5 -> 203.0.113.10       proto=58  syn=0 dport=0     ALLOW
+  40  IPv6         2001:db8::5 -> 2001:db8::10       proto=58  syn=0 dport=0     ALLOW
+  41  IPv6         2001:db8::5 -> 2001:db8::10       proto=58  syn=0 dport=0     ALLOW
+  42  IPv6         2001:db8::5 -> 2001:db8::10       proto=58  syn=0 dport=0     ALLOW
+  43  IPv6         2001:db8::5 -> 2001:db8::10       proto=58  syn=0 dport=0     DROP ICMP flood
