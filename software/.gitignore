@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Real network captures can contain private addresses: keep them out of git
+data/*.pcap
+!data/test_packets.pcap
